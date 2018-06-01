@@ -40,7 +40,7 @@ gem 'capistrano-passenger', '~> 0.2.0'
 # Add this if you're using rbenv
  gem 'capistrano-rbenv', '~> 2.1'
 
- gem 'jquery-rails'
+ gem "font-awesome-rails"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
