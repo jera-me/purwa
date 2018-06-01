@@ -1260,11 +1260,7 @@ Single Post
     background-color: #f4f4f4;
 
 }
-.comment-form .form-control:[type='text'],
-.comment-form .form-control:[type="email"],
-.comment-form .form-control:[type="password"]{
-    color: #b8b8b8;
-}
+
 .comment-form button.comment-submit-btn {
     background-color: #ff6600;
     color: #fff;
