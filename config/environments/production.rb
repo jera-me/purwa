@@ -1,13 +1,9 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
-  config.cache_classes = false
 
-  # Do not eager load code on boot.
-  config.eager_load = false
 
-  # Show full error reports.
-  config.consider_all_requests_local = true
+
 
   # Enable/disable caching. By default caching is disabled.
   if Rails.root.join('tmp/caching-dev.txt').exist?
@@ -22,7 +18,7 @@ Rails.application.configure do
 
     config.cache_store = :null_store
   end
-  
+
 
   # Debug mode disables concatenation and preprocessing of assets.
   # This option may cause significant delays in view rendering with a large
