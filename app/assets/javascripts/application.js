@@ -11,8 +11,8 @@
 // about supported directives.
 //
 //= require ckeditor/init
+//= require init_ckeditor.coffee
 //= require rails-ujs
-//= require jquery
-//= require jquery_ujs
+
 //= require turbolinks
 //= require_tree .

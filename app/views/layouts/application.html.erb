@@ -14,6 +14,7 @@
             <%= csrf_meta_tags %>
 
             <%= stylesheet_link_tag    'application', media: 'all', "data-turbolinks-track": 'reload' %>
+
             <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 
 
@@ -30,7 +31,8 @@
                       enable_page_level_ads: true
                  });
             </script>
-            
+
+
         </head>
 
         <body>
@@ -66,7 +68,7 @@
             <!--header start-->
             <header class="clearfix">
                 <!-- Start Navigation -->
-                <nav class="navbar navbar-default navbar-sticky dark bootsnav">
+                <nav class="navbar navbar-default navbar-sticky dark bootsnav" data-no-turbolink>
 
                     <div class="container">
                         <!-- Start Header Navigation -->
@@ -87,7 +89,7 @@
                                 <li><%= link_to root_path do %>Home<% end %></li>
                                 <li><a href="contact.html">Series</a></li>
                                 <li><a href="contact.html">Contact</a></li>
-                                <li><%= link_to new_article_path do %><i class="fa fa-bookmark"></i> Tambah Article <% end %></li>
+                                <li><%= link_to new_article_path, data: { 'no-turbolink'=>true} do %><i class="fa fa-bookmark"></i> Tambah Article <% end %></li>
                                 <li><%= link_to root_path do %><i class="fa fa-plus"></i> Tambah Series <% end %></li>
 
                             </ul>
@@ -130,6 +132,8 @@
             </footer>
             <!-- footer -->
 
-  <%= javascript_include_tag 'application', "data-turbolinks-track": 'reload' %>
+
   </body>
+  <%= javascript_include_tag 'application', "data-turbolinks-track": 'reload' %>
+
     </html>

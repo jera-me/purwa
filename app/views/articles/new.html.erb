@@ -1,8 +1,9 @@
+
 <section class="section-padding-70">
             <div class="container">
 
               <%= form_for @articles do |f| %>
-              <form>
+
 
                 <div class="row">
                   <div class="col-md-4">
@@ -44,7 +45,7 @@
                   </div><!-- /.col-md-4 -->
                 </div>
 
-                <div class="form-group">
+                <div class="form-group" data-no-turbolink>
                   <%= f.label :content %>
                   <%= f.cktext_area :content, placeholder: "Your Content", class: "form-control" %>
                 </div>
@@ -57,9 +58,8 @@
                   <div class="text-right">
                       <%= f.submit 'save', class: "btn btn-primary" %>
                   </div>
-              </form>
-              <% end %>
 
+              <% end %>
 
 
             </div>
