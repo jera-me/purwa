@@ -1,9 +1,0 @@
-production:
-  adapter: mysql2
-  host: 127.0.0.1
-  database: purwa_development
-  username: blajar
-  password: blajarwork6
-  encoding: utf8
-  socket: /var/run/mysqld/mysqld.sock
-  pool: 5

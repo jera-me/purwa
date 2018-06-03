@@ -1,0 +1,29 @@
+#desktop {
+display:none;
+}
+@media screen and (min-width: 500px) {
+#desktop {
+display:block; }
+}
+
+#mobile {
+display:none;
+}
+@media screen and (max-width: 500px) {
+#mobile {
+display:block; }
+}
+
+.desktop {
+display:none;
+}
+@media screen and (min-width: 500px) {
+.desktop {
+display:block; }
+}
+
+
+.sticky {
+  position: fixed;
+  top: 150px;
+}

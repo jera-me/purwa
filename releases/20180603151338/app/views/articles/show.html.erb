@@ -1,0 +1,147 @@
+<section class="section-padding-70">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="single-post post-content">
+
+                    <article class="post-wrapper single-post-wrapper transition mb-50">
+                        <header class="post-header">
+                            <div class="post-thumbnail">
+                                <a href="#">
+                                    <%= image_tag "blog-img-4.jpg" %>
+                                </a>
+                            </div>
+                        </header>
+                        <div class="blog-content transition">
+                            <div class="entry-header mb-20">
+                                <h1>
+                                    <%= @articles.title %>
+                                </h1>
+                                <em><%= @articles.created_at.strftime("%d %B %Y, Pukul %H:%M") %>, Series: <%= @articles.series.title %></em>
+
+                                <div class="mt-20">
+                                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                                <!-- honeyfact -->
+                                <ins class="adsbygoogle"
+                                   style="display:block"
+                                   data-ad-client="ca-pub-4268093070731551"
+                                   data-ad-slot="5117010229"
+                                   data-ad-format="auto"></ins>
+                                <script>
+                                (adsbygoogle = window.adsbygoogle || []).push({});
+                                </script>
+                                </div>
+                            </div>
+                            <div class="entry-content link-arrow-ltr">
+
+                                <p><%= @articles.content %></p>
+
+                                <em>Tags: <%= @articles.tags %></em>
+                            </div>
+                        </div>
+                    </article>
+
+                </div> <!-- /.post-content -->
+
+                <div class="mb-50" %>
+                  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                  <!-- honeyfact -->
+                  <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-4268093070731551"
+                     data-ad-slot="5117010229"
+                     data-ad-format="auto"></ins>
+                  <script>
+                  (adsbygoogle = window.adsbygoogle || []).push({});
+                  </script>
+                </div>
+
+                <!-- post author wrapper -->
+                <div class="post-author-wrapper mb-50">
+                    <div class="post-author-img">
+                        <img src="http://zynau.com/uploads/ckeditor/pictures/2/content_rio.jpg" alt="Satriyo Unggul Wicaksono" width="40%">
+                    </div>
+                    <div class="post-author-intro">
+                        <div class="post-author-content">
+                            <h3><a href="#">Satriyo Unggul Wicaksono</a></h3>
+                            <p>Hai, Saya menekuni bidang teknologi. Ikuti terus tulisan saya di <b>Purwa.id</b> !</p>
+                        </div>
+                        <ul class="post-author-social-link tt-animate ltr list-inline">
+                            <li>
+                                <a href="https://www.facebook.com/satriyo.u.wicaksono" class=""><i class="fa fa-facebook facebook"></i></a>
+                            </li>
+
+                            <li>
+                                <a href="https://www.facebook.com/satriyo.u.wicaksono" class=""><i class="fa fa-twitter twitter"></i></a>
+                            </li>
+
+                            <li>
+                                <a href="https://www.linkedin.com/in/satriyounggulwicaksono/" class=""><i class="fa fa-linkedin linkedin"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- post author wrapper -->
+
+
+                <!-- comment and reaply -->
+                <div class="comment-wrapper">
+                    <div class="comment-tab">
+
+                        <!-- Nav tabs -->
+
+                        <!-- tab panels -->
+                        <div class="panel-body">
+                            <div class="tab-content">
+
+                                <div role="tabpanel" class="tab-pane fade active in" id="default-comment">
+                                    <div class="comment-respond mt-30">
+
+                                      <div id="disqus_thread"></div>
+                                        <script>
+
+                                        /**
+                                        *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                                        *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+                                        /*
+                                        var disqus_config = function () {
+                                        this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+                                        this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                                        };
+                                        */
+                                        (function() { // DON'T EDIT BELOW THIS LINE
+                                        var d = document, s = d.createElement('script');
+                                        s.src = 'https://purwaid.disqus.com/embed.js';
+                                        s.setAttribute('data-timestamp', +new Date());
+                                        (d.head || d.body).appendChild(s);
+                                        })();
+                                        </script>
+                                        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                                    </div> <!-- /.comment-resond -->
+
+                                </div>
+
+
+                            </div> <!-- /.tab-content -->
+
+
+                        </div> <!-- /.panel-body -->
+
+                    </div> <!-- /.comment-tab -->
+
+                </div>
+                <!-- comment and reaply -->
+
+
+            </div> <!-- /.col-md-8 -->
+
+            <div class="col-md-4">
+                <div class="tt-sidebar-wrapper">
+                  <%= render 'layouts/widget' %>
+                  <%= render 'layouts/widgetlastpost' %>
+                  <%= render 'layouts/widgetiklan' %>
+                </div> <!-- /.tt-sidebar-wrapper -->
+            </div> <!-- /.col-md-4 -->
+        </div> <!-- /.row -->
+    </div>
+</section>

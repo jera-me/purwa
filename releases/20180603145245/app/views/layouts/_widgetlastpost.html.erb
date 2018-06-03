@@ -1,0 +1,22 @@
+<div class="widget latest-news-widget mb-50" id="desktop">
+    <h3 class="widget-title">Latest News</h3>
+    <% @articleslast.each do |b| %>
+    <div class="media mb-5">
+
+        <div class="media-body">
+
+            <h3 style="font-size: 110%;">
+                <%= link_to article_path(b) do %><%= b.title %><% end %>
+            </h3>
+
+            <div class="entry-meta">
+                <ul class="list-inline">
+                    <li><%= @articles.created_at.strftime("%d %B %Y") %></li>
+                </ul>
+            </div>
+
+        </div>
+    </div> <!-- /.media -->
+<% end %>
+
+</div> <!-- /.widget -->
