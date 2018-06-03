@@ -5,50 +5,31 @@
                 <div class="row">
                     <div class="col-md-8">
                         <div class="post-content">
-                            <article class="post-wrapper transition mb-20">
-                              <div class="transition">
-                                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                                <!-- honeyfact -->
-                                <ins class="adsbygoogle"
-                                   style="display:block"
-                                   data-ad-client="ca-pub-4268093070731551"
-                                   data-ad-slot="5117010229"
-                                   data-ad-format="auto"></ins>
-                                <script>
-                                (adsbygoogle = window.adsbygoogle || []).push({});
-                                </script>
-                              </div>
-                          </article>
 
-
-
-                          <% @articles.each_slice(3) do |a| %>
-                            <% a.each do |b| %>
-                            <article class="post-wrapper transition mb-20">
-                                <header class="post-header">
-                                    <div class="post-thumbnail">
-                                        <%= link_to article_path(b) do %>
-                                            <%= image_tag "blog-img-1.jpg" %>
-                                        <% end %>
-                                    </div>
-                                </header>
-                                <div class="blog-content transition">
-                                    <div class="entry-header mb-20">
+                          <% @articles[0..0].each do |b| %>
+                          <article class="post-wrapper transition mb-20">
+                              <header class="post-header">
+                                  <div class="post-thumbnail">
                                       <%= link_to article_path(b) do %>
-                                        <h2 style="font-size: 120%; line-height: 35px;">
-                                            <%= b.title %>
-                                        </h2>
+                                          <%= image_tag "blog-img-1.jpg" %>
                                       <% end %>
-                                    </div>
-                                    <div class="entry-content link-arrow-ltr" id="desktop">
-                                        <p><%= truncate b.description, length: 200 %></p>
-                                        <%= link_to 'Read More', article_path(b) %>
-                                        <%= link_to edit_article_path(b) do %><span> | <i class="fa fa-bookmark"></i> Edit </span> <% end %>
-                                        <%= link_to root_path do %><span> | <i class="fa fa-history"></i> Hapus </span> <% end %>
-                                    </div>
-                                </div>
-                            </article>
-                            <% end %>
+                                  </div>
+                              </header>
+                              <div class="blog-content transition">
+                                  <div class="entry-header mb-20">
+                                    <h2 style="font-size: 130%; line-height: 35px;">
+                                        <%= b.title  %>
+                                    </h2>
+                                  </div>
+                                  <div class="entry-content link-arrow-ltr" id="desktop">
+                                      <p><%= truncate b.description, length: 200 %></p>
+                                      <%= link_to 'Read More', article_path(b) %>
+                                      <%= link_to edit_article_path(b) do %><span> | <i class="fa fa-bookmark"></i> Edit </span> <% end %>
+                                      <%= link_to root_path do %><span> | <i class="fa fa-history"></i> Hapus </span> <% end %>
+                                  </div>
+                              </div>
+                          </article>
+                          <% end %>
 
                             <article class="post-wrapper transition mb-20">
                               <div class="transition">
@@ -66,6 +47,29 @@
                           </article>
 
 
+
+                            <% @articles.drop(1).each do |b| %>
+                            <div class="col-md-6 mb-20">
+                                <article class="post-wrapper latest-blog-wrapper transition mb-20">
+
+                                    <div class="blog-content transition">
+                                        <div class="blog-date">
+                                            <span>28 January, 2017</span>
+                                        </div>
+
+                                        <div class="entry-header mb-20">
+                                          <%= link_to article_path(b) do %>
+                                            <h2 style="font-size: 130%; line-height: 35px;">
+                                                <%= b.title  %>
+                                            </h2>
+                                          <% end %>
+                                        </div>
+                                        <div class="blog-autthor">
+                                            <a href="#"><span>BY</span> EFTAKHER ALAM</a>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
                             <% end %>
 
                         </div> <!-- /.post-content -->

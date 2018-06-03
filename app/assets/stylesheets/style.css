@@ -848,6 +848,10 @@ Blog Page
 .blog-content .entry-content p {
     font-size: 19px;
 }
+@media screen and (max-width: 500px) {
+.blog-content .entry-content p {
+	    font-size: 16px; }
+}
 .blog-content .entry-content a {
     color: #ff6600;
     font-size: 19px;
@@ -862,6 +866,18 @@ Blog Page
     -ms-box-shadow: 0px 30px 40px 0px rgba(25, 25, 25, 0.15);
     -o-box-shadow: 0px 30px 40px 0px rgba(25, 25, 25, 0.15);
 }
+
+@media screen and (max-width: 500px) {
+.post-wrapper .blog-content{
+			padding: 40px 10px 40px 10px;
+			    box-shadow: 0px 30px 40px 0px rgba(25, 25, 25, 0.15);
+			    -webkit-box-shadow: 0px 30px 40px 0px rgba(25, 25, 25, 0.15);
+			    -moz-box-shadow: 0px 30px 40px 0px rgba(25, 25, 25, 0.15);
+			    -ms-box-shadow: 0px 30px 40px 0px rgba(25, 25, 25, 0.15);
+			    -o-box-shadow: 0px 30px 40px 0px rgba(25, 25, 25, 0.15);
+			}
+}
+
 .post-wrapper:hover .blog-content{
     box-shadow: none;
 }
@@ -960,6 +976,17 @@ Blog Page
 Blog Widget style
 ========================================================================*/
 .widget{
+    padding: 40px 20px 40px 20px;
+    border-radius: 5px;
+
+    box-shadow: 0px 1px 40px 0px rgba(25, 25, 25, 0.15);
+    -webkit-box-shadow: 0px 1px 40px 0px rgba(25, 25, 25, 0.15);
+    -moz-box-shadow: 0px 1px 40px 0px rgba(25, 25, 25, 0.15);
+    -ms-box-shadow: 0px 1px 40px 0px rgba(25, 25, 25, 0.15);
+    -o-box-shadow: 0px 1px 40px 0px rgba(25, 25, 25, 0.15);
+}
+
+.widget-2{
     padding: 40px 40px;
     border-radius: 5px;
 
@@ -1045,6 +1072,14 @@ Single Post
     background-color: #edf2fa;
     padding: 40px;
     display: table;
+}
+
+@media screen and ( max-width: 500px ){
+.post-author-wrapper {
+    background-color: #edf2fa;
+    padding: 20px;
+    display: table;
+}
 }
 .post-author-img {
     display: table-cell;
