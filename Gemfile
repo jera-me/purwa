@@ -36,11 +36,14 @@ gem 'jbuilder', '~> 2.5'
 gem 'capistrano', '~> 3.7', '>= 3.7.1'
 gem 'capistrano-rails', '~> 1.2'
 gem 'capistrano-passenger', '~> 0.2.0'
-
-# Add this if you're using rbenv
  gem 'capistrano-rbenv', '~> 2.1'
 
  gem "font-awesome-rails"
+ gem 'will_paginate', '~> 3.1.0'
+
+ gem 'ckeditor', github: 'galetahub/ckeditor'
+ gem 'carrierwave'
+ gem 'mini_magick'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -53,7 +56,7 @@ end
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console', '>= 3.3.0'
-  gem 'listen', '>= 3.0.5', '< 3.2'
+  gem 'listen', '>= 3.0.0'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'

@@ -40,11 +40,11 @@
 
 /* ================= General ==================== */
 body{
-	font-family: 'Lato', sans-serif;
+	font-family: 'Open Sans', sans-serif;
 	font-size: 18px;
 	line-height: 28px;
 	font-weight: 400;
-	color: #999;
+	color: #565151;
 	background-color: #fff;
 	overflow-x: hidden;
 	-webkit-text-size-adjust: 100%;
@@ -219,6 +219,9 @@ input:-webkit-autofill:focus {
 
 /* ================= Global Classes ==================== */
 /* -- margin-top -- */
+.mt-5{
+	margin-top: 20px;
+}
 .mt-20{
 	margin-top: 20px;
 }
@@ -243,6 +246,10 @@ input:-webkit-autofill:focus {
 
 
 /* -- margin-bottom -- */
+.mb-5{
+	margin-bottom: 5px;
+}
+
 .mb-20{
 	margin-bottom: 20px;
 }
@@ -834,10 +841,13 @@ Blog Page
 .post-header .post-thumbnail a img {
     width: 100%;
 }
-.post-wrapper .blog-content .entry-header h2 {
-    font-size: 32px;
+.post-wrapper .blog-content .entry-header h1 {
+    font-size: 38px;
     color: #212121;
-    line-height: 45px;
+    line-height: 40px;
+}
+.post-wrapper .blog-content .entry-header em {
+    font-size: 15px;
 }
 .post-wrapper .blog-content .entry-header h2 a{
     color: #212121;
@@ -846,7 +856,7 @@ Blog Page
     color: #ff6600;
 }
 .blog-content .entry-content p {
-    font-size: 19px;
+    font-size: 15px;
 }
 @media screen and (max-width: 500px) {
 .blog-content .entry-content p {
@@ -854,9 +864,12 @@ Blog Page
 }
 .blog-content .entry-content a {
     color: #ff6600;
-    font-size: 19px;
+    font-size: 15px;
     font-family: 'PT Serif', serif;
     font-weight: 700;
+}
+.blog-content .entry-content em {
+    font-size: 15px;
 }
 .post-wrapper .blog-content{
     padding: 40px 40px;
@@ -890,6 +903,19 @@ Blog Page
     }
 }
 
+.post-wrapper .blog-autthor a{
+    font-size: 13px;
+    color: #212121;
+    text-transform: uppercase;
+    font-weight: 200;
+}
+
+.post-wrapper .blog-date {
+    font-size: 13px;
+    color: #212121;
+    text-transform: uppercase;
+    font-weight: 200;
+}
 /*pagination style
 --------------------------------------------------------------------------------------------------*/
 .page-pagination{
@@ -1084,6 +1110,11 @@ Single Post
 .post-author-img {
     display: table-cell;
     vertical-align: middle;
+}
+@media screen and ( min-width: 987px ){
+.post-author-intro {
+    margin-left: -200px;
+}
 }
 .post-author-content{
     margin-left: 20px;

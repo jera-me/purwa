@@ -7,6 +7,7 @@ class ArticlesController < ApplicationController
 
   def show
     @articles = Article.find(params[:id])
+    @articleslast = Article.order(created_at: :desc).limit(4)
     response.headers["Expires"] = 1.year.from_now.httpdate
   end
 

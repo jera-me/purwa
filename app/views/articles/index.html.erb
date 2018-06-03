@@ -6,30 +6,7 @@
                     <div class="col-md-8">
                         <div class="post-content">
 
-                          <% @articles[0..0].each do |b| %>
-                          <article class="post-wrapper transition mb-20">
-                              <header class="post-header">
-                                  <div class="post-thumbnail">
-                                      <%= link_to article_path(b) do %>
-                                          <%= image_tag "blog-img-1.jpg" %>
-                                      <% end %>
-                                  </div>
-                              </header>
-                              <div class="blog-content transition">
-                                  <div class="entry-header mb-20">
-                                    <h2 style="font-size: 130%; line-height: 35px;">
-                                        <%= b.title  %>
-                                    </h2>
-                                  </div>
-                                  <div class="entry-content link-arrow-ltr" id="desktop">
-                                      <p><%= truncate b.description, length: 200 %></p>
-                                      <%= link_to 'Read More', article_path(b) %>
-                                      <%= link_to edit_article_path(b) do %><span> | <i class="fa fa-bookmark"></i> Edit </span> <% end %>
-                                      <%= link_to root_path do %><span> | <i class="fa fa-history"></i> Hapus </span> <% end %>
-                                  </div>
-                              </div>
-                          </article>
-                          <% end %>
+
 
                             <article class="post-wrapper transition mb-20">
                               <div class="transition">
@@ -48,24 +25,30 @@
 
 
 
-                            <% @articles.drop(1).each do |b| %>
-                            <div class="col-md-6 mb-20">
-                                <article class="post-wrapper latest-blog-wrapper transition mb-20">
-
+                            <% @articles.each do |b| %>
+                            <div class="col-md-6 mb-30">
+                                <article class="post-wrapper transition mb-20">
+                                    <header class="post-header">
+                                        <div class="post-thumbnail">
+                                            <%= link_to article_path(b) do %>
+                                                <%= image_tag "blog-img-4.jpg" %>
+                                            <% end %>
+                                        </div>
+                                    </header>
                                     <div class="blog-content transition">
                                         <div class="blog-date">
-                                            <span>28 January, 2017</span>
+                                            <span><%= b.created_at.strftime("%d %b %Y") %></span>
                                         </div>
 
                                         <div class="entry-header mb-20">
                                           <%= link_to article_path(b) do %>
-                                            <h2 style="font-size: 130%; line-height: 35px;">
+                                            <h2 style="font-size: 120%; line-height: 35px;">
                                                 <%= b.title  %>
                                             </h2>
                                           <% end %>
                                         </div>
                                         <div class="blog-autthor">
-                                            <a href="#"><span>BY</span> EFTAKHER ALAM</a>
+                                            <a href="#"><span>BY</span> SATRIYO UNGGUL</a>
                                         </div>
                                     </div>
                                 </article>
