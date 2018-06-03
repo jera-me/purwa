@@ -29,7 +29,7 @@ Rails.application.configure do
 
   # Do not fallback to assets pipeline if a precompiled asset is missed.
   config.assets.compile = false
-  config.active_record.migration_error = :page_load
+  config.assets.precompile += %w( *.css *.erb *.scss *.js *.coffee *.png *.jpg *.ico *.gif)
 
   # `config.assets.precompile` and `config.assets.version` have moved to config/initializers/assets.rb
 
