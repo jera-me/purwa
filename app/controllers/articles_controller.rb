@@ -33,6 +33,13 @@ class ArticlesController < ApplicationController
     redirect_to root_path
   end
 
+  def destroy
+    @articles = Article.find(params[:id])
+    @articles.destroy
+
+    redirect_to root_path
+  end
+
 
 
   def resource_params

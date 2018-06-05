@@ -31,7 +31,7 @@
                                     <header class="post-header">
                                         <div class="post-thumbnail">
                                             <%= link_to article_path(b) do %>
-                                                <%= image_tag "blog-img-4.jpg" %>
+                                                <%= image_tag b.image %>
                                             <% end %>
                                         </div>
                                     </header>
@@ -49,6 +49,8 @@
                                         </div>
                                         <div class="blog-autthor">
                                             <a href="#"><span>BY</span> SATRIYO UNGGUL</a>
+                                            <%= link_to 'edit', edit_article_path(b) %>
+                                            <%= link_to "Hapus", article_path(b), method: :delete, data: {confirm: "Yakin nih?"} %>
                                         </div>
                                     </div>
                                 </article>
